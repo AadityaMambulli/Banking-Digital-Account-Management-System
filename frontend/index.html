@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking & Digital Account Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Banking & Digital Account Management System</h1>
+        <p class="subtitle">Academic Prototype | Java Spring Boot REST API Frontend</p>
+
+        <!-- Response Display Box -->
+        <div id="outputContainer" class="output-box hidden">
+            <h3>Response Output</h3>
+            <pre id="outputContent"></pre>
+        </div>
+
+        <div class="grid">
+            <!-- 1. CREATE ACCOUNT -->
+            <div class="card">
+                <h2>1. Create Account</h2>
+                <form id="createAccountForm">
+                    <label for="createAccNum">Account Number:</label>
+                    <input type="number" id="createAccNum" required placeholder="e.g. 101">
+
+                    <label for="createAccHolder">Account Holder Name:</label>
+                    <input type="text" id="createAccHolder" required placeholder="e.g. Aaditya">
+
+                    <label for="createEmail">Email:</label>
+                    <input type="email" id="createEmail" placeholder="e.g. aaditya@example.com">
+
+                    <label for="createPhone">Phone Number:</label>
+                    <input type="text" id="createPhone" placeholder="e.g. 9876543210">
+
+                    <label for="createAccType">Account Type:</label>
+                    <select id="createAccType">
+                        <option value="SAVINGS">SAVINGS</option>
+                        <option value="CURRENT">CURRENT</option>
+                    </select>
+
+                    <label for="createInitialDeposit">Initial Deposit (₹):</label>
+                    <input type="number" id="createInitialDeposit" min="0" value="1000" step="any">
+
+                    <button type="submit">Create Account</button>
+                </form>
+            </div>
+
+            <!-- 2. DEPOSIT -->
+            <div class="card">
+                <h2>2. Deposit</h2>
+                <form id="depositForm">
+                    <label for="depositAccNum">Account Number:</label>
+                    <input type="number" id="depositAccNum" required placeholder="e.g. 101">
+
+                    <label for="depositAmount">Amount (₹):</label>
+                    <input type="number" id="depositAmount" min="1" required placeholder="e.g. 2000" step="any">
+
+                    <button type="submit">Deposit</button>
+                </form>
+            </div>
+
+            <!-- 3. WITHDRAW -->
+            <div class="card">
+                <h2>3. Withdraw</h2>
+                <form id="withdrawForm">
+                    <label for="withdrawAccNum">Account Number:</label>
+                    <input type="number" id="withdrawAccNum" required placeholder="e.g. 101">
+
+                    <label for="withdrawAmount">Amount (₹):</label>
+                    <input type="number" id="withdrawAmount" min="1" required placeholder="e.g. 1000" step="any">
+
+                    <button type="submit">Withdraw</button>
+                </form>
+            </div>
+
+            <!-- 4. CHECK BALANCE -->
+            <div class="card">
+                <h2>4. Check Balance</h2>
+                <form id="checkBalanceForm">
+                    <label for="balanceAccNum">Account Number:</label>
+                    <input type="number" id="balanceAccNum" required placeholder="e.g. 101">
+
+                    <button type="submit">Check Balance</button>
+                </form>
+            </div>
+
+            <!-- 5. ACCOUNT DETAILS -->
+            <div class="card">
+                <h2>5. Account Details</h2>
+                <form id="accDetailsForm">
+                    <label for="detailsAccNum">Account Number:</label>
+                    <input type="number" id="detailsAccNum" required placeholder="e.g. 101">
+
+                    <button type="submit">View Account</button>
+                </form>
+            </div>
+
+            <!-- 6. TRANSACTION HISTORY -->
+            <div class="card">
+                <h2>6. Transaction History</h2>
+                <form id="txHistoryForm">
+                    <label for="txAccNum">Account Number:</label>
+                    <input type="number" id="txAccNum" required placeholder="e.g. 101">
+
+                    <button type="submit">View Transactions</button>
+                </form>
+            </div>
+
+            <!-- 7. ALL ACCOUNTS -->
+            <div class="card full-width">
+                <h2>7. All Accounts</h2>
+                <button id="btnViewAllAccounts">View All Accounts</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
